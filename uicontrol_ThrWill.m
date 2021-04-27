@@ -16,19 +16,23 @@ p = uipanel(f,'Position',[0.125 0.75 0.75 0.2]);
                      'Position', [pos 20 60 20],...
                      'Callback', @setWavelength);
                  
+        end
+
+                 
     % legg til tekstfelt
     addTextBox(20, 'Wavelength', 'nm')
     addTextBox(120, 'OPO power', 'mW')
     addTextBox(220, 'IR power', 'mW')
     addTextBox(320, 'Delay', 'fs')
         
-    end
+    
 
     % test for å lage plottevindu
     axes('Position', [0.1,0.1,0.8,0.6])
     x = linspace(0,1);
     plot(x, sin(2*pi*x))
-
+    
+    
     
     % skal bestemme hva som skjer når brukeren har lagt inn input 
     function setWavelength(hObj, event) %#ok<INUSL>
